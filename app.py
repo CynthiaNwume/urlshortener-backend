@@ -80,8 +80,9 @@ def redirect_to_original(short_code):
 from flask import jsonify
 
 @app.route('/')
-def index():
-    return render_template('index.html')
+def home():
+    return jsonify({"message": "URL Shortener Backend is running 🚀"})
+
 
 
 # GET /dashboard-data - Returns all URL entries for the dashboard
